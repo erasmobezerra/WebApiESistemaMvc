@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/2a7d9684-f2d3-428d-bee7-beea26615fc7/resourceGroups/RecursosWebApi/providers/Microsoft.Web/sites/sistemamvcteste",
+    "appService.deploySubpath": "publish"
+}
