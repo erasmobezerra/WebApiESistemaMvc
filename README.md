@@ -35,20 +35,40 @@ As configurações principais ficam em `appsettings.json` e `appsettings.Develop
 
 ## 🚀 Executando localmente
 
-Recomendações rápidas usando o SDK .NET na linha de comando (PowerShell):
+Recomendações para executar os serviços na linha de comando (PowerShell):
 
-1) Restaurar pacotes e compilar a solução  
-2) Rodar a API (`curso.api`)  
-3) Rodar a aplicação MVC (`curso.web.mvc`)  
-4) Executar os testes  
-
-## 🗄️ Migrations e banco de dados
-
-Se o projeto utiliza Entity Framework e há migrations na pasta `Migrations/`, aplique-as antes de rodar a API contra um banco limpo:
+1) Restaurar pacotes e compilar a solução
 
 ```powershell
-dotnet ef database update --project .\curso.api\ --startup-project .\curso.api\
+dotnet restore 
+dotnet build
 ```
+
+2) Aplicar essas migrations e criar as tabelas no SQL Server  
+
+```powershell
+dotnet ef database update
+```
+
+3) Executar os testes  
+
+```powershell
+dotnet test .\tests\curso.api.tests\curso.api.tests.csproj
+```
+
+4) Rodar a API (`curso.api`)  
+
+```powershell
+dotnet restore .\curso.api\curso.api.csproj
+```
+
+5) Rodar a aplicação MVC (`curso.web.mvc`) 
+
+```powershell
+dotnet restore .\curso.web.api\curso.web.api.csproj
+```
+
+
 
 ## 🤝 Como contribuir
 
