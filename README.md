@@ -59,16 +59,18 @@ dotnet test .\tests\curso.api.tests\curso.api.tests.csproj
 4) Rodar a API (`curso.api`)  
 
 ```powershell
-dotnet restore .\curso.api\curso.api.csproj
+dotnet watch run .\curso.api\curso.api.csproj
 ```
 
 5) Rodar a aplicação MVC (`curso.web.mvc`) 
 
 ```powershell
-dotnet restore .\curso.web.api\curso.web.api.csproj
+dotnet watch run --project .\curso.web.mvc\curso.web.mvc.csproj
 ```
 
+6) O navegador abrirá automaticamente na página da aplicação em execução: 
 
+![alt text](image.png)
 
 ## 🤝 Como contribuir
 
